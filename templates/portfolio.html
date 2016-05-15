@@ -1,6 +1,6 @@
 
 <b>
-    {{'title_employee' | translate}}
+    As employee
 </b>
 
 <div class="row">
@@ -11,9 +11,9 @@
                 <img class="activator"  analytics-on="click" analytics-event="Check description of {{work.title}}" analytics-category="Work {{work.type}}" analytics-label="Check description of {{work.title}}" ng-src="media/{{work.image}}" height="125">
             </div>
             <div class="card-content">
-                <p><a ng-if="work.url" analytics-on="click" analytics-event="Check website of {{work.title}}" analytics-category="Work {{work.type}}" analytics-label="Check website of {{work.title}}" href="{{work.url}}" target="_blank">{{'check_website' | translate}} </a>
-                    <br> {{'period' | translate}} : <b>{{work.start_date}} - {{work.end_date}} </b>
-                    <br> {{'location' | translate}} : <b>{{work.location}}</b></p>
+                <p><a ng-if="work.url" analytics-on="click" analytics-event="Check website of {{work.title}}" analytics-category="Work {{work.type}}" analytics-label="Check website of {{work.title}}" href="{{work.url}}" target="_blank">Check website </a>
+                    <br> Period : <b>{{work.start_date}} - {{work.end_date}} </b>
+                    <br> Location : <b>{{work.location}}</b></p>
                 <p >
                     <b ng-repeat="tech in work.tech track by $index">
                         <b ng-if="$first">|</b> {{tech}} |</b>
@@ -29,7 +29,7 @@
 </div>
 
 <b>
-    {{'title_university' | translate}} <a href="http://ual.es" target="_blank">(@UAL)</a>
+    As student at University <a href="http://ual.es" target="_blank">(@UAL)</a>
 </b>
 
 <div class="row">
@@ -63,7 +63,7 @@
 </div>
 
 <b>
-    {{'title_freelance' | translate}}
+    As freelance developer
 </b>
 
 <div class="row">
@@ -75,8 +75,8 @@
             </div>
             <div class="card-content">
                 <span class="card-title activator grey-text text-darken-4">{{work.title}}<i  analytics-on="click" analytics-event="Check description of {{work.title}}" analytics-category="Work {{work.type}}" analytics-label="Check description of {{work.title}}" class="material-icons right">more_vert</i></span>
-                <p><a ng-if="work.url" analytics-on="click" analytics-event="Check website of {{work.title}}" analytics-category="Work {{work.type}}" analytics-label="Check website of {{work.title}}" href="{{work.url}}" target="_blank">{{'check_website' | translate}} </a>
-                    <br> {{'year' | translate}} : <b>{{work.year}}</b></p>
+                <p><a ng-if="work.url" analytics-on="click" analytics-event="Check website of {{work.title}}" analytics-category="Work {{work.type}}" analytics-label="Check website of {{work.title}}" href="{{work.url}}" target="_blank">Check website </a>
+                    <br> Year : <b>{{work.year}}</b></p>
                 <p >
                     <b ng-repeat="tech in work.tech track by $index">
                         <b ng-if="$first">|</b> {{tech}} |</b>
