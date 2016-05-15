@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="personalWebsite" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="personalWebsite" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="personalWebsite" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="personalWebsite" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>{{'meta_title' | translate}}{{ page }}</title>
+  <meta name="description" content="{{'meta_description' | translate}}">
+  <meta name="keywords" content="software,python,django,java,php,almeria,world,github,passion">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="media/images/favicon.ico">
+  <link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="static/css/master.min.css">
+
+  <script src="static/js/master.min.js"></script>
+  <script src="static/js/app.js"></script>
+  <script src="static/js/controllers.js"></script>
+
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA--1', 'auto');
+
+  </script>
+
+
+
+</head>
+<body>
+    <nav class="light-blue" role="navigation">
+      <div class="nav-wrapper container">
+        <a href="#" data-activates="mobile-demo" class="button-collapse white-text"><i class="material-icons">menu</i></a>
+        <a id="logo-container" analytics-on="click" analytics-event="Select Home" analytics-category="Menu" analytics-label="Select Home"  href="#/" class="brand-logo">Manu J. López</a>
+          <ul class="right" style="width: 30px" ng-click="lang('es'); selected_lang = 'es'">
+              <li><span analytics-on="click" analytics-event="Select Spanish language" analytics-category="Language" analytics-label="Select Spanish language" class="flag-icon flag-icon-es flag-icon-background" ng-class="{ 'selected' : selected_lang == 'es'}"></span></li>
+          </ul>
+          <ul class="right "  style="width: 30px" ng-click="lang('en'); selected_lang = 'en'">
+              <li><span analytics-on="click" analytics-event="Select English language" analytics-category="Language" analytics-label="Select English language" class="flag-icon flag-icon-gb flag-icon-background" ng-class="{ 'selected' : selected_lang == 'en'}"></span></li>
+          </ul>
+
+          <ul class="right hide-on-med-and-down">
+              <li><a class="whitet" analytics-on="click" analytics-event="Select Home" analytics-category="Menu" analytics-label="Select Home" href="#/">{{'home' | translate}}</a></li>
+           <li><a class="whitet" analytics-on="click" analytics-event="Select Portfolio" analytics-category="Menu" analytics-label="Select Portfolio" href="#/portfolio">Portfolio</a></li>
+          </ul>
+
+          <ul class="side-nav" id="mobile-demo">
+          <li><a class="whitet" analytics-on="click" analytics-event="Select Home Mobile" analytics-category="Menu" analytics-label="Select Home Mobile" href="#/">{{'home' | translate}}</a></li>
+          <li><a class="whitet" analytics-on="click" analytics-event="Select Portfolio Mobile" analytics-category="Menu" analytics-label="Select Portfolio Mobile" href="#/portfolio">Portfolio</a></li>
+         </ul>
+      </div>
+    </nav>
+
+    <main>
+      <div class="container">
+        <br>
+        <div ng-view></div>
+      </div>
+    </main>
+
+    <footer class="page-footer light-blue" style="padding-top: 0;">
+      <div class="footer-copyright">
+        <div class="container right-align">
+          {{'made_with'| translate }} <i class="material-icons" style="font-size: 12px;">favorite</i> {{'in'| translate }}
+        </div>
+      </div>
+    </footer>
+
+<script type="application/javascript">
+
+  $(document).ready(function(){
+    $(".button-collapse").sideNav();
+    $('ul.tabs').tabs();
+  });
+
+</script>
+</body>
+
+
+
+</html>

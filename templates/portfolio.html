@@ -1,0 +1,95 @@
+
+<b>
+    {{'title_employee' | translate}}
+</b>
+
+<div class="row">
+
+    <div class="col s12 m12 l4" ng-repeat="work in works track by $index" ng-if="work.type=='job'">
+        <div class="card work">
+            <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator"  analytics-on="click" analytics-event="Check description of {{work.title}}" analytics-category="Work {{work.type}}" analytics-label="Check description of {{work.title}}" ng-src="media/{{work.image}}" height="125">
+            </div>
+            <div class="card-content">
+                <p><a ng-if="work.url" analytics-on="click" analytics-event="Check website of {{work.title}}" analytics-category="Work {{work.type}}" analytics-label="Check website of {{work.title}}" href="{{work.url}}" target="_blank">{{'check_website' | translate}} </a>
+                    <br> {{'period' | translate}} : <b>{{work.start_date}} - {{work.end_date}} </b>
+                    <br> {{'location' | translate}} : <b>{{work.location}}</b></p>
+                <p >
+                    <b ng-repeat="tech in work.tech track by $index">
+                        <b ng-if="$first">|</b> {{tech}} |</b>
+                </p>
+            </div>
+            <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">{{work.title}}<i class="material-icons right">close</i></span>
+                <p>{{work.desc}}</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<b>
+    {{'title_university' | translate}} <a href="http://ual.es" target="_blank">(@UAL)</a>
+</b>
+
+<div class="row">
+
+    <div class="col s12 m12 l4" ng-repeat="work in works track by $index" ng-if="work.type=='ual'">
+        <div class="card work" >
+            <div class="card-image waves-effect waves-block waves-light">
+                <img analytics-on="click" analytics-event="Check description of {{work.title}}" analytics-category="Work {{work.type}}" analytics-label="Check description of {{work.title}}"  class="activator" ng-src="media/{{work.image}}" height="200">
+            </div>
+            <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">{{work.title}}<i  analytics-on="click" analytics-event="Check description of {{work.title}}" analytics-category="Work {{work.type}}" analytics-label="Check description of {{work.title}}" class="material-icons right">more_vert</i></span>
+                <p>
+                    <a ng-if="work.url" analytics-on="click" analytics-event="Check url of {{work.title}}" analytics-category="Work {{work.type}}" analytics-label="Check url of {{work.title}}"  href="{{work.url}}" target="_blank"><i class="mdi mdi-link small black-text"></i></a>
+                    <a ng-if="work.url_doc" analytics-on="click" analytics-event="Check url document of {{work.title}}" analytics-category="Work {{work.type}}" analytics-label="Check url document of {{work.title}}" href="{{work.url_doc}}" target="_blank"><i class="mdi mdi-file-pdf-box small red-text"></i></a>
+                    <a ng-if="work.gallery" href="{{work.gallery}}" analytics-on="click" analytics-event="Check gallery of {{work.title}}" analytics-category="Work {{work.type}}" analytics-label="Check gallery of {{work.title}}" target="_blank"><i class="mdi mdi-view-dashboard small green-text"></i></a>
+                    <a ng-if="work.video" href="{{work.video}}" analytics-on="click" analytics-event="Check video of {{work.title}}" analytics-category="Work {{work.type}}" analytics-label="Check video of {{work.title}}" target="_blank"><i class="mdi mdi-video small red-text"></i></a>
+                </p>
+                <p >
+                    <b ng-repeat="tech in work.tech track by $index">
+                    <b ng-if="$first">|</b> {{tech}} |</b>
+                </p>
+
+            </div>
+            <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">{{work.title}}<i class="material-icons right">close</i></span>
+                <p>{{work.desc}}</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<b>
+    {{'title_freelance' | translate}}
+</b>
+
+<div class="row">
+
+    <div class="col s12 m12 l4" ng-repeat="work in works track by $index" ng-if="work.type=='freelance'" >
+        <div class="card work">
+            <div class="card-image waves-effect waves-block waves-light">
+                <img  analytics-on="click" analytics-event="Check description of {{work.title}}" analytics-category="Work {{work.type}}" analytics-label="Check description of {{work.title}}" class="activator" ng-src="media/{{work.image}}" height="80" >
+            </div>
+            <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">{{work.title}}<i  analytics-on="click" analytics-event="Check description of {{work.title}}" analytics-category="Work {{work.type}}" analytics-label="Check description of {{work.title}}" class="material-icons right">more_vert</i></span>
+                <p><a ng-if="work.url" analytics-on="click" analytics-event="Check website of {{work.title}}" analytics-category="Work {{work.type}}" analytics-label="Check website of {{work.title}}" href="{{work.url}}" target="_blank">{{'check_website' | translate}} </a>
+                    <br> {{'year' | translate}} : <b>{{work.year}}</b></p>
+                <p >
+                    <b ng-repeat="tech in work.tech track by $index">
+                        <b ng-if="$first">|</b> {{tech}} |</b>
+                </p>
+            </div>
+            <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">{{work.title}}<i class="material-icons right">close</i></span>
+                <p>{{work.desc}}</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+

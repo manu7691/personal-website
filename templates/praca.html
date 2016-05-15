@@ -1,0 +1,27 @@
+<b>
+    Salary Calculator
+</b>
+
+<div class="row">
+
+    <div class="col s12 m12 l4">
+
+        <div class="row">
+            <form class="col s12">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input  ng-model="salary_gross" id="salary" placeholder="Salary gross" type="number" ng-model-options="{debounce:1000}" ng-change="calculate()" >
+                        <p ng-hide="salary_net == -1">
+                            {{salary_net}} (net: gross -30%)
+                        </p>
+                    </div>
+
+                </div>
+
+            </form>
+        </div>
+
+    </div>
+
+</div>
+

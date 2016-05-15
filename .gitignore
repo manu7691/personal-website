@@ -1,0 +1,9 @@
+.idea/
+bower_components/
+node_modules/
+sass/
+package.json
+bower.json
+gulpfile.js
+media/docs/**
+media/images/flash.zip
