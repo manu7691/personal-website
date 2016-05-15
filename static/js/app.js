@@ -13,12 +13,11 @@ personalWebsiteApp.config(['$routeProvider',
   function($routeProvider) {
     $routeProvider.
         when('/', {
-            templateUrl: 'templates/about.html',
-            controller:"HomeCtrl"
+            templateUrl: 'templates/about.html'
         }).
         when('/portfolio', {
             templateUrl: 'templates/portfolio.html',
-            controller:"PortfolioCtrl"
+            controller:'PortfolioCtrl'
         }).
         when('/praca', {
             templateUrl: 'templates/praca.html',

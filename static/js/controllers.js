@@ -1,8 +1,7 @@
 var personalWebsiteControllers = angular.module('personalWebsiteControllers', []);
 
-personalWebsiteControllers.controller('PracaCtrl', ['$rootScope','$scope','$analytics',
-    function ($rootScope,$scope,$analytics) {
-        $rootScope.page = " - Salary Calculator";
+personalWebsiteControllers.controller('PracaCtrl', ['$scope','$analytics',
+    function ($scope,$analytics) {
         $scope.salary_net = -1;
         $scope.calculate = function(){
             $scope.salary_net = $scope.salary_gross - $scope.salary_gross*(30/100)+" zl";
@@ -12,7 +11,6 @@ personalWebsiteControllers.controller('PracaCtrl', ['$rootScope','$scope','$anal
 
 personalWebsiteControllers.controller('PortfolioCtrl', ['$rootScope','$scope',
     function ($rootScope,$scope) {
-        $rootScope.page = " - Portfolio";
 
         $scope.works = [
 
@@ -38,9 +36,4 @@ personalWebsiteControllers.controller('PortfolioCtrl', ['$rootScope','$scope',
 
         ];
 
-}]);
-
-personalWebsiteControllers.controller('HomeCtrl', ['$rootScope',
-    function ($rootScope) {
-        $rootScope.page = " - Home";
 }]);
